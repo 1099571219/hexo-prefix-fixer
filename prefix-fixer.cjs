@@ -41,10 +41,12 @@ ${subTitle}`
 const readDir = (gTitle = false, root = __dirname) => {
     const dirs = fs.readdirSync(path.resolve(root))
     for (let i = 0; i < dirs.length; i++) {
+        if (dirs[i] === 'README.md') continue
         const curFilePath = path.resolve(root, './' + dirs[i])
         const cur = fs.statSync(curFilePath)
         cur.isDirectory() ? readDir(gTitle, curFilePath) : dirs[i].endsWith('.md') && addPrefix(curFilePath, dirs[i], root, gTitle)
     }
     return
 }
+
 readDir(true)
