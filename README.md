@@ -10,9 +10,10 @@ git clone https://github.com/1099571219/hexo-prefix-fixer.git
 
 ## 脚本说明
 
-将 prefix-fixer.cjs 脚本放到需要处理的博客文件夹的根目录中,比如:
-将 prefix-fixer.cjs 放到 web 文件夹中,然后执行即可，会对 web 下的所有文件进行处理，当然了，会跳过 .md 以外的文件
-执行后 wwwBlog.md 的 title 会被设置为 wwwBlog ，categories: [web] ，tag: web
+有做路径兼容，win，mac，linux 都能用<br />
+将 prefix-fixer.cjs 脚本放到需要处理的博客文件夹的根目录中,比如:<br>
+将 prefix-fixer.cjs 放到 web 文件夹中,然后执行即可，会对 web 下的所有文件进行处理，当然了，会跳过 .md 以外的文件<br>
+执行后 wwwBlog.md 的 title 会被设置为 wwwBlog ，categories: [web] ，tag: web<br>
 tsBlog.md 的 title 为 tsBLog ， categories: [web,前端,ts] , tag：ts
 
 ```mermaid
@@ -21,7 +22,6 @@ graph LR
   frontEnd--- ts(ts)---tsBlog(tsBlog.md)
   web--- www(wwwBlog.md)
   web(web)---|后端| backEnd(后端)--- node(node)--- nest(nest)---nestBlog(nestBlog.md)
-
 ```
 
 <br />
